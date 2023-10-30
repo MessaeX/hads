@@ -182,12 +182,13 @@
 
 </div>
 <div class="buttons">
-  <button onclick="alert(`Your level of anxiety is ${anxietyCount}.
-  Your level of depression is ${deprCount}.`)">Get results</button>
+  <button onclick="countW()">Get results</button>
   <button onclick="window.location.reload()">Clear</button>
-  <button onclick="countA()">What does my anxiety level means?</button>
+  <!--<button onclick="countW()">What does my anxiety level means?</button>
   <button onclick="countD()">What does my depression level means?</button>
+  <button onclick="document.getElementById('text').innerHTML= `Your anxiety is ${deprResult}`;">test-button</button>
 </div>
+<p id="text">Future output</p>-->
 
 
   <!--<div>Are you anxious</div> 
@@ -203,23 +204,40 @@
    
     let anxietyCount = 0;
     let deprCount = 0;
-    
+    /*
     console.log(anxietyCount);
     function countA() {
     let anxietyResult = '';
-    if (anxietyCount ==0 && anxietyCount <=7) {anxietyResult=`Normal`; alert(`Your anixety is ${anxietyResult}. Norhing to worry about.`)}
+    if (anxietyCount ==0 || anxietyCount <=7) {anxietyResult=`normal`; alert(`You've got ${anxietyCount} points at anxiety scale. That means, that your results are ${anxietyResult}. Nothing to worry about!`)}
    
-    else if (anxietyCount >=8 && anxietyCount <=10) {anxietyResult=`Borderline abnormal`; alert(`Your anixety is ${anxietyResult}. It might be useful to contact your healthcare provider.`)}
-    else {anxietyResult=`Abnormal`; alert(`Your anixety is ${anxietyResult}. Please, contact your healthcare provider.`)}
+    else if (anxietyCount >=8 && anxietyCount <=10) {anxietyResult=`borderline abnormal`; alert(`You've got ${anxietyCount} points at anxiety scale. That means, that your results are ${anxietyResult}. It might be useful to contact your healthcare provider.`)}
+    else {anxietyResult=`abnormal`; alert(`You've got ${anxietyCount} points at anxiety scale. That means, that your results are ${anxietyResult}. Please, contact your healthcare provider.`)}
     }
    
    
     function countD() {
       let deprResult = '';
-      if (deprCount ==0 || deprCount <=7) {deprResult=`Normal`; alert(`Your depression level is ${deprResult}. Norhing to worry about.`)}
-    else if (deprCount >=8 && deprCount <=10) {deprResult=`Borderline abnormal`; alert(`Your depression level is ${deprResult}. It might be useful to contact your healthcare provider.`)}
-    else {deprResult=`Abnormal`; alert(`Your depression level is ${deprResult}. Please, contact your healthcare provider.`)}
+      if (deprCount ==0 || deprCount <=7) {deprResult=`normal`; alert(`You've got ${deprCount} points at depression scale. That means, that your results are ${deprResult}. Nothing to worry about!`)}
+    else if (deprCount >=8 && deprCount <=10) {deprResult=`borderline abnormal`; alert(`You've got ${deprCount} points at depression scale. That means, that your results are ${deprResult}. It might be useful to contact your healthcare provider.`)}
+    else {deprResult=`abnormal`; alert(`You've got ${deprCount} points at depression scale. That means, that your results are ${deprResult}. Please, contact your healthcare provider.`)}
+    }*/
+
+
+    function countW() {
+    let anxietyResult = '';
+    if (anxietyCount ==0 || anxietyCount <=7) {anxietyResult=`normal`; alert(`You've got ${anxietyCount} points at anxiety scale. That means, that your results are ${anxietyResult}. Nothing to worry about!`)}
+   
+    else if (anxietyCount >=8 && anxietyCount <=10) {anxietyResult=`borderline abnormal`; alert(`You've got ${anxietyCount} points at anxiety scale. That means, that your results are ${anxietyResult}. It might be useful to contact your healthcare provider.`)}
+    else {anxietyResult=`abnormal`; alert(`You've got ${anxietyCount} points at anxiety scale. That means, that your results are ${anxietyResult}. Please, contact your healthcare provider.`)}
+
+      let deprResult = '';
+      if (deprCount ==0 || deprCount <=7) {deprResult=`normal`; alert(`You've got ${deprCount} points at depression scale. That means, that your results are ${deprResult}. Nothing to worry about!`)}
+    else if (deprCount >=8 && deprCount <=10) {deprResult=`borderline abnormal`; alert(`You've got ${deprCount} points at depression scale. That means, that your results are ${deprResult}. It might be useful to contact your healthcare provider.`)}
+    else {deprResult=`abnormal`; alert(`You've got ${deprCount} points at depression scale. That means, that your results are ${deprResult}. Please, contact your healthcare provider.`)}
     }
+    
+    
+   
   </script>
 </body>
 </html>
