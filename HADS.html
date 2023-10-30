@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HADS questionnaire</title>
+  <style>
+    body {
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+    h1,h2 {
+      text-align: center;
+    }
+    .q {
+      font-weight: bold;
+    }
+    .radio-part {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .q {
+      text-align: center;
+    }
+    .whole {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .buttons {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+    @media screen and (max-width: 950px) {
+      body {
+        padding-left: 2vw;
+        padding-right: 2vw;
+      }
+      .whole {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hospital anxiety and depression scale</h1>
+  <h2>Welcome! Here you can check your anxiety and depression scale via well-accepted questionnaire.</h2>
+<div class="whole">
+<div>
+  <p class="q">I feel tense or 'wound up':</p>
+  <div class="radio-part">
+    <input type="radio" name="a1" onclick="anxietyCount+=3">Most of the time
+    <input type="radio" name="a1" onclick="anxietyCount+=2">A lot of time
+    <input type="radio" name="a1" onclick="anxietyCount+=1">From time to time, occasionally
+    <input type="radio" name="a1">Not at all
+  </div>
+</div>
+<div>
+  <p class="q">I still enjoy the things I used to enjoy:</p>
+  <div class="radio-part">
+    <input type="radio" name="d1">Definitely as much
+    <input type="radio" name="d1" onclick="deprCount+=1">Not quite so much
+    <input type="radio" name="d1" onclick="deprCount+=2">Only a little
+    <input type="radio" name="d1" onclick="deprCount+=3">Hardly at all
+  </div>
+</div>
+<div>
+  <p class="q">I get a sort of frightened feeling as if something awful is about to happen</p>
+  <div class="radio-part">
+    <input type="radio" name="a2" onclick="anxietyCount+=3">Very definitery and quite badly
+    <input type="radio" name="a2" onclick="anxietyCount+=2">Yes, but not too badly
+    <input type="radio" name="a2" onclick="anxietyCount+=1">A little, but it doesn`t worry me
+    <input type="radio" name="a2">Not at all
+  </div>
+</div>
+<div>
+  <p class="q">I can laugh and see the funny side if things:</p>
+  <div class="radio-part">
+    <input type="radio" name="d2">As much as I always could
+    <input type="radio" name="d2" onclick="deprCount+=1">Not quite so much now
+    <input type="radio" name="d2" onclick="deprCount+=2">Definitely not so much now
+    <input type="radio" name="d2" onclick="deprCount+=3">Not at all
+  </div>
+</div>
+<div>
+  <p class="q">Worrying thoughts go through my mind:</p>
+  <div class="radio-part">
+    <input type="radio" name="a3" onclick="anxietyCount+=3">A great deal of the time
+    <input type="radio" name="a3" onclick="anxietyCount+=2">A lot of the time
+    <input type="radio" name="a3" onclick="anxietyCount+=1">From time to time, but not too often
+    <input type="radio" name="a3">Only occasionally
+  </div>
+</div>
+<div>
+  <p class="q">I feel cheerful:</p>
+  <div class="radio-part">
+    <input type="radio" name="d3" onclick="deprCount+=3">Not at all
+    <input type="radio" name="d3" onclick="deprCount+=2">Not often
+    <input type="radio" name="d3" onclick="deprCount+=1">Sometimes
+    <input type="radio" name="d3">Most of the time
+  </div>
+</div>
+<div>
+  <p class="q">I can sit at ease and feel relaxed:</p>
+  <div class="radio-part">
+    <input type="radio" name="a4">Definitely
+    <input type="radio" name="a4" onclick="anxietyCount+=1">Usually
+    <input type="radio" name="a4" onclick="anxietyCount+=2">Not Often
+    <input type="radio" name="a4" onclick="anxietyCount+=3">Not at all
+  </div>
+</div>
+<div>
+  <p class="q">I feel as if I am slowed down:</p>
+  <div class="radio-part">
+    <input type="radio" name="d4" onclick="deprCount+=3">Nearly all the time
+    <input type="radio" name="d4" onclick="deprCount+=2">Very often
+    <input type="radio" name="d4" onclick="deprCount+=1">Sometimes
+    <input type="radio" name="d4">Not at all
+  </div>
+</div>
+<div>
+  <p class="q">I get a sort of frightened feeling like 'butterflies' in the stomach:</p>
+  <div class="radio-part">
+    <input type="radio" name="a5">Not at all
+    <input type="radio" name="a5" onclick="anxietyCount+=1">Occasionally
+    <input type="radio" name="a5" onclick="anxietyCount+=2">Quite Often
+    <input type="radio" name="a5" onclick="anxietyCount+=3">Very often
+  </div>
+</div>
+<div>
+  <p class="q">I have lost interest in my appearance:</p>
+  <div class="radio-part">
+    <input type="radio" name="d5" onclick="deprCount+=3">Definitely
+    <input type="radio" name="d5" onclick="deprCount+=2">I don`t take as much care as I should
+    <input type="radio" name="d5" onclick="deprCount+=1">I may not take quite as much care
+    <input type="radio" name="d5">I take just as much care as ever
+  </div>
+</div>
+<div>
+  <p class="q">I feel resless as I have to be on the move:</p>
+  <div class="radio-part">
+    <input type="radio" name="a6" onclick="anxietyCount+=3">Very much indeed
+    <input type="radio" name="a6" onclick="anxietyCount+=2">Quite a lot
+    <input type="radio" name="a6" onclick="anxietyCount+=1">Not very much
+    <input type="radio" name="a6">Not at all
+  </div>
+</div>
+<div>
+  <p class="q">I look forward with enjoyment to things:</p>
+  <div class="radio-part">
+    <input type="radio" name="d6">As much as I ever did
+    <input type="radio" name="d6" onclick="deprCount+=1">Rather less than I used to
+    <input type="radio" name="d6" onclick="deprCount+=2">Definitely less than I used to
+    <input type="radio" name="d6" onclick="deprCount+=3">Hardly at all
+  </div>
+</div>
+<div>
+  <p class="q">I get sudden feelings of panic:</p>
+  <div class="radio-part">
+    <input type="radio" name="a7" onclick="anxietyCount+=3">Very often indeed
+    <input type="radio" name="a7" onclick="anxietyCount+=2">Quite often
+    <input type="radio" name="a7" onclick="anxietyCount+=1">Not very often
+    <input type="radio" name="a7">Not at all
+  </div>
+</div>
+<div>
+  <p class="q">I can enjoy a good book or radio or TV program:</p>
+  <div class="radio-part">
+    <input type="radio" name="d7">Often
+    <input type="radio" name="d7" onclick="deprCount+=1">Sometimes
+    <input type="radio" name="d7" onclick="deprCount+=2">Not often
+    <input type="radio" name="d7" onclick="deprCount+=3">Very seldom
+  </div>
+</div>
+
+</div>
+<div class="buttons">
+  <button onclick="alert(`Your level of anxiety is ${anxietyCount}.
+  Your level of depression is ${deprCount}.`)">Get results</button>
+  <button onclick="window.location.reload()">Clear</button>
+  <button onclick="countA()">What does my anxiety level means?</button>
+  <button onclick="countD()">What does my depression level means?</button>
+</div>
+
+
+  <!--<div>Are you anxious</div> 
+  <input type="radio" onclic k="anxietyCount +=2; console.log(anxietyCount)"> Very Yes
+  <input type="radio" onclick="anxietyCount +=1; console.log(anxietyCount)">Yes
+  
+  <div>Are you anxious????</div>
+  <input type="radio" onclick="anxietyCount +=2; console.log(anxietyCount)"> Very Yes
+  <input type="radio" onclick="anxietyCount +=1; console.log(anxietyCount)">Yes
+
+  <button onclick="anxietyCount=0; console.log(anxietyCount)">Clear</button>-->
+  <script>
+   
+    let anxietyCount = 0;
+    let deprCount = 0;
+    
+    console.log(anxietyCount);
+    function countA() {
+    let anxietyResult = '';
+    if (anxietyCount ==0 && anxietyCount <=7) {anxietyResult=`Normal`; alert(`Your anixety is ${anxietyResult}. Norhing to worry about.`)}
+   
+    else if (anxietyCount >=8 && anxietyCount <=10) {anxietyResult=`Borderline abnormal`; alert(`Your anixety is ${anxietyResult}. It might be useful to contact your healthcare provider.`)}
+    else {anxietyResult=`Abnormal`; alert(`Your anixety is ${anxietyResult}. Please, contact your healthcare provider.`)}
+    }
+   
+   
+    function countD() {
+      let deprResult = '';
+      if (deprCount ==0 || deprCount <=7) {deprResult=`Normal`; alert(`Your depression level is ${deprResult}. Norhing to worry about.`)}
+    else if (deprCount >=8 && deprCount <=10) {deprResult=`Borderline abnormal`; alert(`Your depression level is ${deprResult}. It might be useful to contact your healthcare provider.`)}
+    else {deprResult=`Abnormal`; alert(`Your depression level is ${deprResult}. Please, contact your healthcare provider.`)}
+    }
+  </script>
+</body>
+</html>
